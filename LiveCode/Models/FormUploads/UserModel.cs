@@ -30,5 +30,6 @@ namespace LiveCode.Models.FormUploads
 
 		[Display(Name = "Image")]
 		public string? ProfilePicture { get; set; }
+		public int kjjjjjjjjjj { get; }	
 	}
 }
