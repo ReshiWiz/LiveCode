@@ -1,0 +1,54 @@
+﻿@model IEnumerable<dynamic>
+
+<p>
+	<a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Name
+			</th>
+			<th>
+				Country
+			</th>
+			<th>
+				State
+			</th>
+			<th>
+				City
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@item.Id
+				</td>
+				<td>
+					@item.Name
+				</td>
+				<td>
+					@(item.Country != null ? item.Country.Name : "")
+				</td>
+				<td>
+					@(item.State != null ? item.State.Name : "")
+				</td>
+				<td>
+					@(item.City != null ? item.City.Name : "")
+				</td>
+				<td>
+					<button class="btn btn-info" onclick="EditModel()">Edit</button>
+					@Html.ActionLink("Details", "Details", new { id = item.Id }) |
+					@Html.ActionLink("Delete", "Delete", new { id = item.Id })
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

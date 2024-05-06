@@ -1,0 +1,123 @@
+﻿@model LiveCode.Models.FormUploads.UserViewModel;
+
+
+
+<div class="modal fade" id="modalFileupload" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<form id="userFileUpload" method="post" enctype="multipart/form-data" asp-action="Create">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">First Name <span class="required">*</span></label>
+							<input class="form-control border-form-control" name="UserName" placeholder="Gurdeep" type="text">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Last Name <span class="required">*</span></label>
+							<input class="form-control border-form-control" name="LastName" placeholder="Osahan" type="text">
+						</div>
+					</div>
+				</div>
+				<!-- Add the missing properties -->
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Qualification</label>
+							<input class="form-control border-form-control" name="Qualification" type="text">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Experience</label>
+							<input class="form-control border-form-control" name="Experience" type="number">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Speaking Date</label>
+							<input class="form-control border-form-control" name="SpeakingDate" type="date">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Speaking Time</label>
+							<input class="form-control border-form-control" name="SpeakingTime" type="time">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Venue</label>
+							<input class="form-control border-form-control" name="Venue" type="text">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Phone <span class="required">*</span></label>
+							<input class="form-control border-form-control" name="Phone" placeholder="123 456 7890" type="number">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Email Address <span class="required">*</span></label>
+							<input class="form-control border-form-control" placeholder="iamosahan@gmail.com" disabled="" type="email" name="email">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Country <span class="required">*</span></label>
+							<select class="form-control" id="country-list" name="CountryId">
+								<option value="">Select Country</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">City <span class="required">*</span></label>
+							<select class="form-control" id="city-list" name="CityId">
+								<option value="">Select City</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Zip Code <span class="required">*</span></label>
+							<input class="form-control border-form-control" name="ZipCode" type="number">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">State <span class="required">*</span></label>
+							<select class="form-control" id="state-id" name="StateId">
+								<option value="">Select State</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label">Address <span class="required">*</span></label>
+							<textarea class="form-control border-form-control" name="Address"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-right">
+						<button type="button" class="btn btn-danger border-none">Cancel</button>
+						<button type="submit" class="btn btn-success border-none">Save Changes</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
